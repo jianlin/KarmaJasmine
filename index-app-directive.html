@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AngularJS, jQuery, Bootstrap</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/angular.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+        <!-- css and js included here for experimentation and ease of editing.
+             In a real production situation they should be in a separate file -->
+        <style>
+            main section, aside section {
+                border: 6px dashed dodgerblue; border-radius: 6px; height: 300px; padding: 1em
+            }
+            aside section { border-color: orange }
+        </style>
+        <script>
+            angular.module("myApp", [])
+                .controller("myController", function() {
+                    var vm = this;
+
+                    this.foo = 123;
+                })
+                .directive("myDirective", function() {
+                    return {
+                        scope: { bar: "=" },
+                        template: "here is my value {{ bar }} <input type='text' ng-model='bar'>"
+                    };
+                });
+
+        </script>
+    </head>
+    <body ng-controller="myController as myCtrl">
+
+        <div class="container">
+            <div class="row">
+                <main class="col-sm-8">
+                    <section>
+
+                        main
+                        <p><input type="text" ng-model="myCtrl.foo"></p>
+                        <p><input type="text" ng-model="myCtrl.foo"></p>
+                        <p>the value is {{ myCtrl.foo }}</p>
+                        <p>the value squared is {{ myCtrl.foo * myCtrl.foo }}</p>
+                        
+                        <p>the value is <span ng-bind="myCtrl.foo"></span></p> <!-- another way -->
+                        <p>is the value even? {{ myCtrl.foo % 2 === 0 }}</p>
+                        <p>is the value odd? <span ng-bind="myCtrl.foo % 2 === 1"></span></p> <!-- another way -->
+                        <p><input type="text" ng-model="myCtrl.foo"></p>
+
+                    </section>
+                </main>
+                <aside class="col-sm-4">
+                    <section>
+
+                        sidebar
+
+                        <my-directive bar="myCtrl.foo"></my-directive>
+
+                    </section>
+                </aside>
+            </div>
+        </div>
+
+    </body>
+</html>
