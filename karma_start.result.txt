@@ -1,0 +1,7 @@
+[32m12 03 2016 19:21:53.499:INFO [karma]: [39mKarma v0.13.22 server started at http://localhost:9876/
+[32m12 03 2016 19:21:53.511:INFO [launcher]: [39mStarting browser Chrome
+[32m12 03 2016 19:21:54.497:INFO [Chrome 49.0.2623 (Mac OS X 10.9.5)]: [39mConnected on socket /#lb_PfRiWO0oGcMVHAAAA with id 78026799
+Chrome 49.0.2623 (Mac OS X 10.9.5): Executed 0 of 2 SUCCESS (0 secs / 0 secs)
+[1A[2KChrome 49.0.2623 (Mac OS X 10.9.5): Executed 1 of 2 SUCCESS (0 secs / 0.023 secs)
+[1A[2KChrome 49.0.2623 (Mac OS X 10.9.5): Executed 2 of 2 SUCCESS (0 secs / 0.028 secs)
+[1A[2KChrome 49.0.2623 (Mac OS X 10.9.5): Executed 2 of 2 SUCCESS (0.034 secs / 0.028 secs)
