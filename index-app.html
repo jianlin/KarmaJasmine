@@ -6,6 +6,7 @@
         <title>AngularJS, jQuery, Bootstrap</title>
         <script src="js/jquery.js"></script>
         <script src="js/angular.js"></script>
+        <script src="js/controller.js"></script>
         <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
         <!-- css and js included here for experimentation and ease of editing.
              In a real production situation they should be in a separate file -->
@@ -15,21 +16,9 @@
             }
             aside section { border-color: orange }
         </style>
-        <script>
-            angular.module("myApp", [])
-                .controller("myController", function() {
-                    var vm = this;
 
-                    vm.foo = 123;
-                
-                    vm.getReversedDigitNumber = function() {
-                        return +(vm.foo.toString().split("").reverse().join(""));
-                    }
-                });
-
-        </script>
     </head>
-    <body ng-controller="myController as myCtrl">
+    <body ng-controller="ListCtrl as listCtrl">
 
         <div class="container">
             <div class="row">
