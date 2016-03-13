@@ -14,5 +14,5 @@ angular.module("myApp", [])
               finished: item.done,
               unfinished: !item.done
           };
-      }
+      };
   });
